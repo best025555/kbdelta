@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "best025555-kbdelta"
+version = "0.1.0"
+description = "把输入按语义边界切成独立单元，逐单元核对知识库的增量更新相关的特征并标出命中位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "best025555" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://best025555.github.io"
+Repository = "https://github.com/best025555/kbdelta"
+Issues = "https://github.com/best025555/kbdelta/issues"
+
+[project.scripts]
+kbdelta = "kbdelta:main"
+
+[tool.setuptools]
+py-modules = ["kbdelta"]
